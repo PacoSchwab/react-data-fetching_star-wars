@@ -30,9 +30,8 @@ export default function Character() {
   );
   console.log(data);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (error) return <div>{error.message}</div>;
+  if (isLoading) return <div>loading...</div>;
 
   return (
     <Layout>
